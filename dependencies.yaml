@@ -1,0 +1,32 @@
+options:
+  languages: [ "java" ]
+  licenses: [ "notice" ] # MIT, Apache, etc.
+  namePrefix: "mvn"
+  resolverType: "coursier"
+  thirdPartyDirectory: "third_party/maven/"
+  transitivity: runtime_deps
+  versionConflictPolicy: fail
+
+dependencies:
+  info.picocli:
+    picocli:
+      lang: java
+      version: "3.8.2"
+  
+  org.junit.jupiter:
+    junit:
+      lang: java
+      licenses: [ "reciprocal" ] # EPL v2
+      modules: [ "jupiter-api", "jupiter-engine" ]
+      version: "5.3.2"
+  
+  org.slf4j:
+    slf4j:
+      lang: java
+      modules: [ "api", "simple" ]
+      version: "1.7.25"
+  
+  org.snakeyaml:
+    snakeyaml-engine:
+      lang: java
+      version: "1.0"

@@ -1,0 +1,7 @@
+# create a .bazelrc-local and set below to JDK 11
+#build --define=ABSOLUTE_JAVABASE=</usr/libexec/java_home -v 11>
+
+try-import .bazelrc-local
+build --host_javabase=@bazel_tools//tools/jdk:absolute_javabase
+build --host_java_toolchain=@bazel_tools//tools/jdk:toolchain_vanilla
+build --java_toolchain=@bazel_tools//tools/jdk:toolchain_vanilla

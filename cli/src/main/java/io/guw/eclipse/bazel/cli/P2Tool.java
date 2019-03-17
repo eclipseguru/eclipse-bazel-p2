@@ -13,6 +13,7 @@ package io.guw.eclipse.bazel.cli;
 
 import java.util.concurrent.Callable;
 
+import picocli.CommandLine;
 import picocli.CommandLine.Command;
 
 /**
@@ -21,9 +22,13 @@ import picocli.CommandLine.Command;
 @Command(name = "p2-tool", description = "Generate Bazel files for building Eclipse p2 Software Sites")
 public class P2Tool implements Callable<Void> {
 
+	public static void main(String[] args) {
+		CommandLine.call(new P2Tool(), args);
+	}
+
 	@Override
 	public Void call() throws Exception {
-		// TODO Auto-generated method stub
+		System.out.println("Hello");
 		return null;
 	}
 }
